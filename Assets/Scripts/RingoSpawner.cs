@@ -1,17 +1,19 @@
+using System;
 using System.Net;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class RingoSpawner : MonoBehaviour
 {
-    private readonly int _gridSizeX = 2;
-    private readonly int _gridSizeY = 6;
+    private readonly int _gridSizeX = 4;
+    private readonly int _gridSizeY = 3;
     private bool _isRingoOnField;
     
     public GameObject ringo;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SpawnRingo();
+        SpawnRingo(0, 0);
         _isRingoOnField = true;
     }
 
@@ -23,7 +25,7 @@ public class RingoSpawner : MonoBehaviour
             return;
         }
         
-        SpawnRingo();
+        SpawnRingo(Random.Range(-_gridSizeX, _gridSizeX), Random.Range(-_gridSizeY, _gridSizeY));
         _isRingoOnField = true;
     }
 
@@ -32,11 +34,11 @@ public class RingoSpawner : MonoBehaviour
         _isRingoOnField = isOnField;
     }
 
-    private void SpawnRingo()
+    private void SpawnRingo(int x, int y)
     {
         // Calculate world position based on grid coordinates and cell size
-        Vector2 spawnPosition = new Vector2(Random.Range(-_gridSizeX, _gridSizeX), Random.Range(-_gridSizeY, _gridSizeY));
+        Vector2 spawnPosition = new Vector2(x, y);
         Instantiate(ringo, spawnPosition, Quaternion.identity);
     }
-    
+
 }

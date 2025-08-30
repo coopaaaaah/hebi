@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - LogicManager
+  - Ringo
+  - Border
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player Layer
   - Water
   - UI
   - 
