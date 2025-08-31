@@ -48,7 +48,6 @@ public class Hebi : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ringo"))
         {
-            Debug.Log("Ringo hit!");
             Destroy(collision.gameObject);
             logicManager.ScorePoint(gameObject);
             logicManager.SpawnRingo();
