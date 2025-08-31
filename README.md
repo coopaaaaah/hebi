@@ -1,5 +1,7 @@
 # Hebi
 
+First game to eat apples.
+
 ## Demo
 
-![demo](https://github.com/user-attachments/assets/e2135fcf-d101-45c1-80de-5560fa8a5d42)
+![demo](https://github.com/user-attachments/assets/4797926f-dcdf-4d5f-9096-bfad829d5727)
